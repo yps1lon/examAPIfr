@@ -13,5 +13,23 @@
   "scripts": {
     "dev": "parcel watch index.html",
     "build": "parcel build index.html"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"},
+        {
+        "jest":{
+          "moduleNameMapper":{
+            "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+            "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+          }
+        }
+      }
+      ]
+    ]
   }
 }

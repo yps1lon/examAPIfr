@@ -21,6 +21,7 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
+    "eslint": "^8.54.0",
     "postinstall": "^0.8.0"
   }
 }
